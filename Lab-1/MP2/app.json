@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#663399",
+    "navigationBarTitleText": "手动创建第一个程序"
+  }
+}
