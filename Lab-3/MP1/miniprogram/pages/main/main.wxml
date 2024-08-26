@@ -1,0 +1,35 @@
+<!--miniprogram/pages/main/main.wxml-->
+<view class="view_main">
+
+  <!-- <swiper indicator-dots="true" class="swiper_head" autoplay="true" interval="3000" duration="2000" indicator-active-color="white">
+    <block wx:for="{{imgPaths}}" wx:key="{{item}}" >
+      <swiper-item id="{{item}}">
+        <image src="{{item}}" class="img_Type" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper> -->
+  <image src="../../images/4.jpg" class="swiper_head" mode="widthFix"/>
+
+  <view class="view_kindList">
+
+    <view class="view_kind" wx:for="{{kindList}}" wx:key="{{item.text}}">
+      <button class="button_kind" style="background:{{item.color}};" data-item="{{item}}" bindtap="doClick">
+        <image class="image_kind" src="{{item.imgPath}}" mode="aspectFit" /> {{item.text}}
+      </button>
+    </view>
+
+  </view>
+
+  <view class="view_info">
+    <view class="view_info_title">
+      ✤垃圾分类简易口诀：
+    </view>
+    <view class="view_info_txt">
+      •        能卖钱的蓝桶桶, 易腐烂的绿桶桶
+    </view>
+    <view class="view_info_txt" style="margin-top:12rpx;">
+      •        有毒有害红桶桶, 没人要的灰桶桶
+    </view>
+
+  </view>
+</view>

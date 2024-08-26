@@ -1,0 +1,65 @@
+<!--miniprogram/pages/search/search.wxml-->
+<view class="view_main">
+  <view class="view_search">
+    <image class="image_type" src="../../images/saomiaoicon.png" mode="aspectFit" bindtap="doClickCamera"></image>
+    <input name="search" value="{{inputTxt}}" bindconfirm='doClick' type='text' confirm-type='search' class="input_type" placeholder="花卉" bindinput="getInput"></input>
+    <image class="image_type" src="../../images/sousuoicon.png" mode="aspectFit" bindtap="doClick"></image>
+  </view>
+
+  <!-- 热门搜索 -->
+  <view wx:if="{{inputTxt==null}}" class="view_info">
+    <view class="view_info_title">
+      热门搜索：
+    </view>
+
+    <view class="view_info_txts">
+      <view wx:for="{{hotSearchItems}}" wx:key="{{item}}">
+        <button class="button_info_txt" data-name="{{item.name}}" bindtap="doClickHotItem">
+          {{item.name}}
+        </button>
+      </view>
+    </view>
+
+  </view>
+  <!-- 显示搜索项目 -->
+  <view wx:if="{{inputTxt!=null}}" wx:for="{{searchItmes}}" wx:key="{{item._id}}" class="view_search_show">
+
+    <view class="view_search_item" id="{{item.id}}" data-type="{{item.type}}" data-name="{{item.name}}" bindtap="doClickItem">
+      <text class="text_search_item">{{item.name}}:{{item.type}}</text>
+      <!-- <text class="text_search_item">{{item._type}}</text> -->
+    </view>
+
+  </view>
+
+  <!-- 弹框显示搜索项目的详细信息 -->
+  <modal hidden="{{isHiddenInfoModal}}" title="{{selectItem.name}}" no-cancel="true" confirm-text="确定" bindconfirm="modal_hidden" bindcancel="modal_hidden">
+    <view class="view_modal_main">
+
+      <button class="button_modal_kind" style="background:{{selectItem._type.color}};">
+        <image class="image_modal_kind" src="{{selectItem._type.imgPath}}" mode="aspectFit" /> {{selectItem._type.text}}
+      </button>
+
+      <view class="view_modal_info">
+
+        <view class="view_modal_info_title">
+          ✤投放要求:
+        </view>
+        <view wx:for="{{selectItem._type.dispose}}" wx:key="{{item}}" class="view_modal_info_txt">
+          ☞{{item}}
+        </view>
+
+      </view>
+
+    </view>
+  </modal>
+
+  <!-- 弹框显示扫描到的五篇 -->
+  <modal hidden="{{isHiddenScanModal}}" title="选择识别的物品" no-cancel="true" confirm-text="取消" bindconfirm="modal_hidden" bindcancel="modal_hidden">
+    <view class="view_info_txts">
+      <view wx:for="{{scanItems}}" wx:key="item" class="view_modal_scan_txt" data-name="{{item.keyword}}" bindtap="doClickScanItem">
+        {{item.keyword}}
+      </view>
+    </view>
+  </modal>
+
+</view>

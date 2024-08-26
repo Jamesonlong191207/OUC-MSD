@@ -1,0 +1,83 @@
+/* miniprogram/pages/main/main.wxss */
+
+.view_main {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper_head {
+  width: 100%;
+  height: 270rpx;
+  background-color: white;
+}
+
+.img_Type {
+  width: 100%;
+  height: 100%;
+}
+
+.view_kindList {
+  width: 100%;
+  height: 100%;
+  column-count: 2;
+  column-gap: 0;
+  background-color: white;
+}
+
+.view_kind {
+  width: 100%;
+  height: 270rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.button_kind {
+  color: white;
+  width: 70%;
+  height: 80%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_kind {
+  margin-top: 10rpx;
+  width: 90%;
+  height: 90%;
+}
+
+.view_info {
+  width: 85%;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  box-shadow: 2px 2px 2px grey;
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
+}
+
+.view_info_title {
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view_info_txt {
+  margin-left: 20rpx;
+  margin-bottom: 5rpx;
+  font-size: 14px;
+}
