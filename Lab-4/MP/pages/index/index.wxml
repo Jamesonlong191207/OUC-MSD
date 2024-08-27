@@ -1,0 +1,11 @@
+<video id = 'myVideo' src="{{src}}" controls enable-danmu danmu-btn show-snapshot-button bindwaiting='videowait' binderror='videoerror' bindprogress="videoprogress"></video>
+<view class = 'danmuArea'>
+  <input type = 'text' placeholder="请输入弹幕内容"bindinput = 'getDanmu'></input>
+  <button bindtap="sendDanmu">发送弹幕</button>
+</view>
+<view class = 'videoList'>
+  <view class='videoBar' wx:for="{{list}}"wx:key="id"data-url='{{item.videoUrl}}'bindtap='playVideo'>
+    <image src = '/images/play.png'></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
