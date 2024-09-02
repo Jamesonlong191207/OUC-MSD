@@ -1,0 +1,38 @@
+/* pages/detail/detail.wxss */
+.container{
+  padding: 15rpx;
+  text-align: center;
+}
+
+.title{
+  font-size: 14pt;
+  line-height: 80rpx;
+}
+
+.poster image
+{
+  width: 700rpx;
+}
+
+.content
+{
+  text-align: left;
+  font-size: 12pt;
+  line-height: 60rpx;
+}
+
+.add_date
+{
+  font-size: 12pt;
+  text-align: right;
+  line-height: 30rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
+}
+
+button
+{
+  width: 250rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+}
