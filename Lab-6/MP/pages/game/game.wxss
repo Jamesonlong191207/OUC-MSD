@@ -1,0 +1,40 @@
+canvas {
+  border: 1rpx solid;
+  width: 320px;
+  height: 320px;
+}
+
+.btnBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrowRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 在左右箭头之间留出空位 */
+  margin-top: 10rpx;
+  width: 300rpx; /* 控制整体宽度 */
+}
+
+.spacer {
+  width: 250rpx; /* 空位的宽度 */
+}
+
+.btnImage {
+  width: 90rpx;
+  height: 75rpx;
+  margin: 10rpx;
+}
+
+.btnImage.upDown {
+  width: 70rpx; /* 缩小上下箭头的宽度 */
+  height: 70rpx; /* 缩小上下箭头的高度 */
+}
+
+.redo {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 70rpx;
+}

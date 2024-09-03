@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='title'>第{{level}}关</view>
+  <countdown duration="{{time}}" bindcomplete="handleCountdownComplete"></countdown>
+  <canvas canvas-id='myCanvas'></canvas>
+  <view class='btnBox'>
+    <image class='btnImage upDown' src='/images/up.svg' bindtap='up'></image>
+    <view class='arrowRow'>
+      <image class='btnImage' src='/images/left.svg' bindtap='left'></image>
+      <view class='spacer'></view>
+      <image class='btnImage' src='/images/right.svg' bindtap='right'></image>
+    </view>
+    <image class='btnImage upDown' src='/images/down.svg' bindtap='down'></image>
+    <image class='redo' src='/images/redo.svg' bindtap='restartGame'></image>
+  </view>
+</view>

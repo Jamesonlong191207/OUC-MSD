@@ -1,0 +1,30 @@
+/* components/countdown/time.wxss */
+/* countdown.wxss */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #ff6347;
+  animation: scale-up 1s ease-in-out infinite;
+}
+
+.countdown-number {
+  font-size: 36rpx;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
